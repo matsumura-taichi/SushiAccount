@@ -6,10 +6,10 @@ import org.junit.Test;
 
 public class AccountTest {
 
+	Account account = new Account();
+
 	@Test
 	public void testRedPlate() {
-		Account account = new Account();
-
 		account.addRedPlate();
 		assertEquals(100, account.getTotalPrice());
 
@@ -19,16 +19,12 @@ public class AccountTest {
 
 	@Test
 	public void testBluePlate() {
-		Account account = new Account();
-
 		account.addBluePlate();
 		assertEquals(300, account.getTotalPrice());
 	}
 
 	@Test
 	public void testRedOneAndBlueTwo() {
-		Account account = new Account();
-
 		account.addRedPlate();
 		account.addBluePlate();
 		account.addBluePlate();
@@ -37,8 +33,6 @@ public class AccountTest {
 
 	@Test
 	public void testYellowPlate() {
-		Account account = new Account();
-
 		account.addYellowPlate();
 		assertEquals(450, account.getTotalPrice());
 	}
