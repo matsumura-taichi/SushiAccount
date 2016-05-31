@@ -52,4 +52,22 @@ public class AccountTest {
 		account.addYellowPlate();
 		assertEquals(850, account.getTotalPrice());
 	}
+
+	@Test
+	public void testRed5AndBlue10AndYellow4() {
+
+		for(int i = 0; i < 5; i++) {
+			account.addRedPlate();
+		}
+
+		for(int i = 0; i < 10; i++) {
+			account.addBluePlate();
+		}
+
+		for(int i = 0; i < 4; i++) {
+			account.addYellowPlate();
+		}
+
+		assertEquals(5300, account.getTotalPrice());
+	}
 }
