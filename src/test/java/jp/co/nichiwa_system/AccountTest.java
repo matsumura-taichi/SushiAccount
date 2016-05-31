@@ -17,4 +17,12 @@ public class AccountTest {
 		assertEquals(200, account.getTotalPrice());
 	}
 
+	@Test
+	public void testBluePlate() {
+		Account account = new Account();
+
+		account.addBluePlate();
+		assertEquals(300, account.getTotalPrice());
+	}
+
 }

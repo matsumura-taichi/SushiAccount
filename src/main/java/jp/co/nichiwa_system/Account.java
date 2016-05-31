@@ -12,4 +12,8 @@ public class Account {
 		totalPrice += 100;
 	}
 
+	public void addBluePlate() {
+		totalPrice += 300;
+	}
+
 }
