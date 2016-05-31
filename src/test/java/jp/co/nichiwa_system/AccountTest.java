@@ -25,4 +25,13 @@ public class AccountTest {
 		assertEquals(300, account.getTotalPrice());
 	}
 
+	@Test
+	public void testRedOneAndBlueTwo() {
+		Account account = new Account();
+
+		account.addRedPlate();
+		account.addBluePlate();
+		account.addBluePlate();
+		assertEquals(700, account.getTotalPrice());
+	}
 }
