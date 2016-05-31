@@ -2,6 +2,10 @@ package jp.co.nichiwa_system;
 
 public class Plate {
 
+	private static final String TYPE_RED = "RED";
+	private static final String TYPE_BLUE = "BLUE";
+	private static final String TYPE_YELLOW = "YELLOW";
+
 	private String type;
 
 	private Plate(String type) {
@@ -10,11 +14,11 @@ public class Plate {
 
 	public int getPrice() {
 		switch (type) {
-		case "RED":
+		case TYPE_RED:
 			return 100;
-		case "BLUE":
+		case TYPE_BLUE:
 			return 300;
-		case "YELLOW":
+		case TYPE_YELLOW:
 			return 450;
 		default:
 			return 0;
@@ -22,14 +26,14 @@ public class Plate {
 	}
 
 	public static Plate createRedPlate() {
-		return new Plate("RED");
+		return new Plate(TYPE_RED);
 	}
 
 	public static Plate createBluePlate() {
-		return new Plate("BLUE");
+		return new Plate(TYPE_BLUE);
 	}
 
 	public static Plate createYellowPlate() {
-		return new Plate("YELLOW");
+		return new Plate(TYPE_YELLOW);
 	}
 }
