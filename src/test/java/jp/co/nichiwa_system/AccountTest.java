@@ -36,4 +36,12 @@ public class AccountTest {
 		account.addYellowPlate();
 		assertEquals(450, account.getTotalPrice());
 	}
+
+	@Test
+	public void testBlueOneAndYellowTwo() {
+		account.addBluePlate();
+		account.addYellowPlate();
+		account.addYellowPlate();
+		assertEquals(1200, account.getTotalPrice());
+	}
 }
