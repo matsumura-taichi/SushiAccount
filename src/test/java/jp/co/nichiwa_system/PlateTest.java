@@ -8,19 +8,19 @@ public class PlateTest {
 
 	@Test
 	public void testGetPriceRed(){
-		Plate plate = new Plate("RED");
+		Plate plate = Plate.createRedPlate();
 		assertEquals(100, plate.getPrice());
 	}
 
 	@Test
 	public void testGetPriceBlue(){
-		Plate plate = new Plate("BLUE");
+		Plate plate = Plate.createBluePlate();
 		assertEquals(300, plate.getPrice());
 	}
 
 	@Test
 	public void testGetPriceYellow(){
-		Plate plate = new Plate("YELLOW");
+		Plate plate = Plate.createYellowPlate();
 		assertEquals(450, plate.getPrice());
 	}
 
