@@ -19,15 +19,15 @@ public class Account {
 	}
 
 	public void addRedPlate() {
-		plateList.add(Plate.createRedPlate());
+		plateList.add(Plate.createRedPlate(1));
 	}
 
 	public void addBluePlate() {
-		plateList.add(Plate.createBluePlate());
+		plateList.add(Plate.createBluePlate(1));
 	}
 
 	public void addYellowPlate() {
-		plateList.add(Plate.createYellowPlate());
+		plateList.add(Plate.createYellowPlate(1));
 	}
 
 }
