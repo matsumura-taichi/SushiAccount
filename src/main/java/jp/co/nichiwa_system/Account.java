@@ -6,7 +6,7 @@ public class Account {
 		return 100;
 	}
 
-	public void addResPlate() {
+	public void addRedPlate() {
 	}
 
 }

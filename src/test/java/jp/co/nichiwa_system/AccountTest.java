@@ -10,7 +10,7 @@ public class AccountTest {
 	public void testRedPlate() {
 		Account account = new Account();
 
-		account.addResPlate();
+		account.addRedPlate();
 
 		assertEquals(100, account.getTotalPrice());
 	}
