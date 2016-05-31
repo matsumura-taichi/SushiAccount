@@ -11,8 +11,10 @@ public class AccountTest {
 		Account account = new Account();
 
 		account.addRedPlate();
-
 		assertEquals(100, account.getTotalPrice());
+
+		account.addRedPlate();
+		assertEquals(200, account.getTotalPrice());
 	}
 
 }
