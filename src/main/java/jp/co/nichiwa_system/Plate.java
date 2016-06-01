@@ -8,10 +8,12 @@ public class Plate {
 
 	private String type;
 	private int lap;
+	private boolean isDiscount;
 
-	private Plate(String type, int lap) {
+	private Plate(String type, int lap, boolean isDiscount) {
 		this.type = type;
 		this.lap = lap;
+		this.isDiscount = isDiscount;
 	}
 
 	public double getPrice() {
@@ -29,23 +31,25 @@ public class Plate {
 	}
 
 	private double calcDiscount(double price) {
+		if(isDiscount) {
 		if(lap >= 5 && lap <= 9) {
 			price = price * 0.9;
 		} else if(lap >= 10) {
 			price = price * 0.8;
 		}
+		}
 		return price;
 	}
 
-	public static Plate createRedPlate(int lap) {
-		return new Plate(TYPE_RED, lap);
+	public static Plate createRedPlate(int lap, boolean isDiscount) {
+		return new Plate(TYPE_RED, lap, isDiscount);
 	}
 
-	public static Plate createBluePlate(int lap) {
-		return new Plate(TYPE_BLUE, lap);
+	public static Plate createBluePlate(int lap, boolean isDiscount) {
+		return new Plate(TYPE_BLUE, lap, isDiscount);
 	}
 
-	public static Plate createYellowPlate(int lap) {
-		return new Plate(TYPE_YELLOW, lap);
+	public static Plate createYellowPlate(int lap, boolean isDiscount) {
+		return new Plate(TYPE_YELLOW, lap, isDiscount);
 	}
 }
