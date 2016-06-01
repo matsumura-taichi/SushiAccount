@@ -25,12 +25,15 @@ public class Plate {
 			price = 450;
 		}
 
+		return calcDiscount(price);
+	}
+
+	private double calcDiscount(double price) {
 		if(lap >= 5 && lap <= 9) {
 			price = price * 0.9;
 		} else if(lap >= 10) {
 			price = price * 0.8;
 		}
-
 		return price;
 	}
 
