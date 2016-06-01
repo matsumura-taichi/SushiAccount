@@ -42,4 +42,20 @@ public class PlateTest {
 		assertEquals(YELLOW_PRICE * 0.8, Plate.createYellowPlate(10, true).getPrice(), 0);
 	}
 
+	@Test
+	public void testGetPriceSilver(){
+
+		final double SILVER_PRICE = 550;
+
+		for (int i = 1; i <= 4; i++) {
+			assertEquals(SILVER_PRICE, Plate.createSilverPlate(i, true).getPrice(), 0);
+		}
+
+		for (int i = 5; i <= 9; i++) {
+			assertEquals(SILVER_PRICE * 0.9, Plate.createSilverPlate(i, true).getPrice(), 0);
+		}
+
+		assertEquals(SILVER_PRICE * 0.8, Plate.createSilverPlate(10, true).getPrice(), 0);
+	}
+
 }
