@@ -110,4 +110,9 @@ public class AccountTest {
 		account.addBluePlate(8, false);
 		assertEquals(100, account.getTotalPrice());
 	}
+
+	public void testSilver() {
+		account.addSilverPlate(1, false);
+		assertEquals(550, account.getTotalPrice());
+	}
 }

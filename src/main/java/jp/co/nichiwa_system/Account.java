@@ -30,4 +30,8 @@ public class Account {
 		plateList.add(Plate.createYellowPlate(lap, isDiscount));
 	}
 
+	public void addSilverPlate(int lap, boolean isDiscount) {
+		plateList.add(Plate.createSilverPlate(lap, isDiscount));
+	}
+
 }
