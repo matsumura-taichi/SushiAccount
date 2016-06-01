@@ -18,16 +18,16 @@ public class Account {
 		return totalPrice;
 	}
 
-	public void addRedPlate() {
-		plateList.add(Plate.createRedPlate(1));
+	public void addRedPlate(int lap) {
+		plateList.add(Plate.createRedPlate(lap));
 	}
 
-	public void addBluePlate() {
-		plateList.add(Plate.createBluePlate(1));
+	public void addBluePlate(int lap) {
+		plateList.add(Plate.createBluePlate(lap));
 	}
 
-	public void addYellowPlate() {
-		plateList.add(Plate.createYellowPlate(1));
+	public void addYellowPlate(int lap) {
+		plateList.add(Plate.createYellowPlate(lap));
 	}
 
 }

@@ -10,46 +10,46 @@ public class AccountTest {
 
 	@Test
 	public void testRedPlate() {
-		account.addRedPlate();
+		account.addRedPlate(1);
 		assertEquals(100, account.getTotalPrice());
 
-		account.addRedPlate();
+		account.addRedPlate(1);
 		assertEquals(200, account.getTotalPrice());
 	}
 
 	@Test
 	public void testBluePlate() {
-		account.addBluePlate();
+		account.addBluePlate(1);
 		assertEquals(300, account.getTotalPrice());
 	}
 
 	@Test
 	public void testRedOneAndBlueTwo() {
-		account.addRedPlate();
-		account.addBluePlate();
-		account.addBluePlate();
+		account.addRedPlate(1);
+		account.addBluePlate(1);
+		account.addBluePlate(1);
 		assertEquals(700, account.getTotalPrice());
 	}
 
 	@Test
 	public void testYellowPlate() {
-		account.addYellowPlate();
+		account.addYellowPlate(1);
 		assertEquals(450, account.getTotalPrice());
 	}
 
 	@Test
 	public void testBlueOneAndYellowTwo() {
-		account.addBluePlate();
-		account.addYellowPlate();
-		account.addYellowPlate();
+		account.addBluePlate(1);
+		account.addYellowPlate(1);
+		account.addYellowPlate(1);
 		assertEquals(1200, account.getTotalPrice());
 	}
 
 	@Test
 	public void testRedOneAndBlueOneAndYellowOne() {
-		account.addRedPlate();
-		account.addBluePlate();
-		account.addYellowPlate();
+		account.addRedPlate(1);
+		account.addBluePlate(1);
+		account.addYellowPlate(1);
 		assertEquals(850, account.getTotalPrice());
 	}
 
@@ -57,17 +57,47 @@ public class AccountTest {
 	public void testRed5AndBlue10AndYellow4() {
 
 		for(int i = 0; i < 5; i++) {
-			account.addRedPlate();
+			account.addRedPlate(1);
 		}
 
 		for(int i = 0; i < 10; i++) {
-			account.addBluePlate();
+			account.addBluePlate(1);
 		}
 
 		for(int i = 0; i < 4; i++) {
-			account.addYellowPlate();
+			account.addYellowPlate(1);
 		}
 
 		assertEquals(5300, account.getTotalPrice());
+	}
+
+	@Test
+	public void testComplex() {
+
+		account.addRedPlate(1);
+		account.addBluePlate(1);
+		account.addBluePlate(1);
+		account.addBluePlate(1);
+		account.addYellowPlate(1);
+
+		account.addRedPlate(2);
+		account.addRedPlate(2);
+
+		account.addRedPlate(3);
+
+		account.addBluePlate(4);
+		account.addBluePlate(4);
+
+		account.addYellowPlate(5);
+		account.addYellowPlate(5);
+
+		account.addBluePlate(9);
+
+		account.addYellowPlate(10);
+		account.addYellowPlate(10);
+
+		account.addRedPlate(15);
+
+		assertEquals(4230, account.getTotalPrice());
 	}
 }
