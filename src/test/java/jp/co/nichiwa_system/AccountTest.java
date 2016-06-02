@@ -124,4 +124,18 @@ public class AccountTest {
 		account.addGoldPlate(1, false);
 		assertEquals(700, account.getTotalPrice());
 	}
+
+	@Test
+	public void testSilver2Gold3Juice1() {
+		account.addSilverPlate(2, true); // \550
+		account.addSilverPlate(6, true); // \550 * 0.9
+
+		account.addGoldPlate(10, true);  // \700 * 0.8
+		account.addGoldPlate(30, true);  // \700 * 0.8
+		account.addGoldPlate(5, true);   // \700 * 0.9
+
+		account.addRedPlate(10, false); // \100
+
+		assertEquals(2895, account.getTotalPrice());
+	}
 }
