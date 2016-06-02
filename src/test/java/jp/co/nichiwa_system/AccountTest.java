@@ -109,7 +109,7 @@ public class AccountTest {
 
 	@Test
 	public void testJuice() {
-		account.addBluePlate(8, false);
+		account.addRedPlate(8, false);
 		assertEquals(100, account.getTotalPrice());
 	}
 
