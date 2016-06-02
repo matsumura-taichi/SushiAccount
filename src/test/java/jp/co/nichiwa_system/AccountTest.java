@@ -101,18 +101,27 @@ public class AccountTest {
 		assertEquals(4230, account.getTotalPrice());
 	}
 
+	@Test
 	public void testDessert() {
 		account.addBluePlate(10, false);
 		assertEquals(300, account.getTotalPrice());
 	}
 
+	@Test
 	public void testJuice() {
 		account.addBluePlate(8, false);
 		assertEquals(100, account.getTotalPrice());
 	}
 
+	@Test
 	public void testSilver() {
 		account.addSilverPlate(1, false);
 		assertEquals(550, account.getTotalPrice());
+	}
+
+	@Test
+	public void testGold() {
+		account.addGoldPlate(1, false);
+		assertEquals(700, account.getTotalPrice());
 	}
 }
