@@ -6,6 +6,7 @@ public class Plate {
 	private static final String TYPE_BLUE = "BLUE";
 	private static final String TYPE_YELLOW = "YELLOW";
 	private static final String TYPE_SILVER = "SILVER";
+	private static final String TYPE_GOLD = "GOLD";
 
 	private String type;
 	private int lap;
@@ -28,6 +29,8 @@ public class Plate {
 			price = 450;
 		} else if (type.equals(TYPE_SILVER)) {
 			price = 550;
+		} else if (type.equals(TYPE_GOLD)) {
+			price = 700;
 		}
 
 		return calcDiscount(price);
@@ -58,5 +61,9 @@ public class Plate {
 
 	public static Plate createSilverPlate(int lap, boolean isDiscount) {
 		return new Plate(TYPE_SILVER, lap, isDiscount);
+	}
+
+	public static Plate createGoldPlate(int lap, boolean isDiscount) {
+		return new Plate(TYPE_GOLD, lap, isDiscount);
 	}
 }
